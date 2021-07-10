@@ -1,0 +1,25 @@
+{
+  "short_name": "React Boilerplate App",
+  "name": "React Boilerplate App",
+  "description": "A PWA boilerplate/reference application in React",
+  "icons": [
+    {
+      "src": "/vercel-icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/vercel-icon-152x152.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#6850ff",
+  "orientation": "portrait"
+}
