@@ -2,6 +2,8 @@ import "../styles/globals.css";
 import { pwaTrackingListeners } from "../scripts/pwaEventlisteners";
 import { NextUIProvider } from "@nextui-org/react";
 import { Montserrat } from "next/font/google";
+import AppNavBar from "../src/components/AppNavBar";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
 
 const inter = Montserrat({
   subsets: ["latin"],
@@ -17,13 +19,16 @@ if (isBrowser) {
 function MyApp({ Component, pageProps }) {
   return (
     <NextUIProvider>
-      <main
-        className={`h-screen dark text-foreground bg-background ${inter.variable} font-sans`}
-      >
-        <div className="container mx-auto h-full">
-          <Component {...pageProps} />
-        </div>
-      </main>
+      <NextThemesProvider attribute="class" defaultTheme="dark">
+        <main
+          className={`flex flex-col h-screen text-foreground bg-background ${inter.variable} font-sans`}
+        >
+          <AppNavBar />
+          <div className="container mx-auto flex-1">
+            <Component {...pageProps} />
+          </div>
+        </main>
+      </NextThemesProvider>
     </NextUIProvider>
   );
 }
