@@ -1,3 +1,5 @@
+"use client";
+
 import { Card, CardBody, Link, Tab, Tabs } from "@nextui-org/react";
 
 const affliliateContent = [

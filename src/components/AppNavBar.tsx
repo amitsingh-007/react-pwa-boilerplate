@@ -4,11 +4,7 @@ import {
   NavbarContent,
   NavbarItem,
 } from "@nextui-org/react";
-import dynamic from "next/dynamic";
-
-const ThemeSwitcher = dynamic(() => import("./ThemeSwitcher"), {
-  ssr: false,
-});
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const AppNavBar = () => (
   <Navbar isBordered>
